@@ -1,0 +1,36 @@
+{
+  reportDir table-format/target/detangled
+  searchPaths
+  [
+    ./table-format/target/table-format-table-format-1.0-SNAPSHOT.jar
+  ]
+  level 2
+  startsWith
+  {
+    include
+    [
+      [
+        com
+        seanshubin
+        table
+        format
+      ]
+    ]
+    exclude []
+    drop
+    [
+      [
+        com
+        seanshubin
+        table
+        format
+      ]
+    ]
+  }
+  ignoreFiles []
+  canFailBuild true
+  ignoreJavadoc true
+  logTiming true
+  logEffectiveConfiguration true
+  allowedInCycle table-format/detangler-allowed-in-cycle.txt
+}

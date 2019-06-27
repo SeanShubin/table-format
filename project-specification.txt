@@ -1,0 +1,44 @@
+{
+  prefix [com seanshubin]
+  name [table format]
+  description 'Table Formatter'
+  version 1.0-SNAPSHOT
+  language kotlin
+  developer {
+    name 'Sean Shubin'
+    githubName SeanShubin
+    mavenUserName SeanShubin
+    organization 'Sean Shubin'
+    url http://seanshubin.com/
+  }
+  dependencies {
+    stdlib {
+      group org.jetbrains.kotlin
+      artifact kotlin-stdlib-jdk8
+    }
+    test {
+      group org.jetbrains.kotlin
+      artifact kotlin-test-junit
+      scope test
+    }
+    coroutines {
+      group org.jetbrains.kotlinx
+      artifact kotlinx-coroutines-core
+    }
+    arrow {
+        group    io.arrow-kt
+        artifact arrow-core
+    }
+    jackson {
+        group com.fasterxml.jackson.module
+        artifact jackson-module-kotlin
+    }
+  }
+  global [ stdlib test ]
+  modules {
+    table-format    []
+  }
+  detangler [table-format]
+  javaVersion 12
+  deployableToMavenCentral true
+}
